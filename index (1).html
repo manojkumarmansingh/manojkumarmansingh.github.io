@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GadgetSense: phone fixes and honest tech answers</title>
+<meta name="description" content="Honest, practical guides about Android phones, apps and everyday gadgets for India. No jargon, no hype.">
+<style>
+:root{
+  --ink:#12181f; --soft:#5b6b7a; --line:#e4e9ee; --bg:#fff;
+  --brand:#1552d6; --brand-soft:#eef3ff; --max:740px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  color:var(--ink);background:var(--bg);line-height:1.68;font-size:17px;
+}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--brand);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+.narrow{max-width:var(--max);margin:0 auto;padding:0 20px}
+
+header.site{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.94);
+  backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:14px 0}
+.brand{display:flex;align-items:center;gap:9px;font-weight:800;font-size:18px;letter-spacing:-.02em;color:var(--ink)}
+.brand:hover{text-decoration:none}
+.brand-mark{width:30px;height:30px;border-radius:8px;background:var(--brand);color:#fff;
+  display:grid;place-items:center;font-size:15px;font-weight:800;flex:none}
+.nav-links{display:flex;gap:22px;font-size:15px;font-weight:600;color:var(--soft)}
+.nav-links a{color:var(--soft)}
+.nav-links a:hover{color:var(--brand);text-decoration:none}
+.nav-links{display:none}
+@media(min-width:820px){.nav-links{display:flex}}
+
+/* hero */
+.hero{padding:44px 0 10px}
+.hero h1{font-size:32px;line-height:1.18;letter-spacing:-.025em;font-weight:800;max-width:20ch}
+.hero p{color:var(--soft);margin-top:14px;font-size:17.5px;max-width:56ch}
+@media(min-width:820px){.hero{padding:64px 0 14px}.hero h1{font-size:46px}}
+
+/* cards */
+.grid{display:grid;gap:16px;padding:32px 0 48px}
+@media(min-width:700px){.grid{grid-template-columns:repeat(2,1fr)}}
+.card{display:block;border:1px solid var(--line);border-radius:14px;padding:20px;
+  color:inherit;background:#fff;transition:.16s}
+.card:hover{border-color:#c9d6e6;text-decoration:none;transform:translateY(-1px);
+  box-shadow:0 8px 24px rgba(18,24,31,.06)}
+.card .kicker{font-size:12.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--brand);margin-bottom:8px}
+.card h2{font-size:19px;line-height:1.3;letter-spacing:-.015em;margin-bottom:8px}
+.card p{color:var(--soft);font-size:15px}
+.card .meta{margin-top:12px;font-size:13px;color:#8494a3}
+
+/* article */
+article{padding:36px 0 24px}
+article h1{font-size:31px;line-height:1.2;letter-spacing:-.025em;font-weight:800}
+@media(min-width:820px){article h1{font-size:40px}}
+.byline{color:var(--soft);font-size:14px;margin-top:14px;padding-bottom:20px;border-bottom:1px solid var(--line)}
+article h2{font-size:23px;margin:34px 0 12px;letter-spacing:-.015em}
+article h3{font-size:19px;margin:26px 0 8px}
+article p{margin:14px 0}
+article ul,article ol{margin:14px 0 14px 22px}
+article li{margin:8px 0}
+article strong{font-weight:700}
+.callout{background:var(--brand-soft);border-left:3px solid var(--brand);
+  padding:14px 18px;border-radius:0 10px 10px 0;margin:22px 0;font-size:16px}
+.callout p{margin:6px 0}
+table{width:100%;border-collapse:collapse;margin:20px 0;font-size:15px}
+th,td{text-align:left;padding:11px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-weight:700;background:#f7f9fc;font-size:13.5px;text-transform:uppercase;letter-spacing:.04em;color:var(--soft)}
+.toc{background:#f7f9fc;border:1px solid var(--line);border-radius:12px;padding:16px 20px;margin:26px 0}
+.toc p{font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:.05em;color:var(--soft);margin:0 0 8px}
+.toc ol{margin:0 0 0 18px;font-size:15.5px}
+.toc li{margin:5px 0}
+
+/* footer */
+footer.site{border-top:1px solid var(--line);padding:34px 0 44px;margin-top:20px;
+  color:var(--soft);font-size:14px;background:#fbfcfd}
+.foot-grid{display:grid;gap:22px}
+@media(min-width:700px){.foot-grid{grid-template-columns:1.4fr 1fr 1fr}}
+footer.site a{color:var(--soft)}
+footer.site a:hover{color:var(--brand)}
+footer.site h3{font-size:13px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink);margin-bottom:10px}
+footer.site ul{list-style:none;display:grid;gap:7px}
+.legal{margin-top:26px;padding-top:18px;border-top:1px solid var(--line);font-size:13px;color:#8494a3}
+
+/* utility */
+.legal-page{padding:36px 0 60px}
+.legal-page h1{font-size:29px;letter-spacing:-.02em;margin-bottom:8px}
+.legal-page .updated{color:var(--soft);font-size:14px;margin-bottom:26px}
+.legal-page h2{font-size:19px;margin:28px 0 10px}
+.legal-page p{margin:12px 0}
+.legal-page ul{margin:12px 0 12px 22px}
+.legal-page li{margin:6px 0}
+.back{display:inline-block;margin-bottom:18px;font-size:15px;font-weight:600}
+
+.section-sep{border-top:1px solid var(--line)}
+.latest{display:block;border:1px solid var(--line);border-radius:14px;padding:22px;margin-top:26px;max-width:520px;color:inherit;background:#fff;transition:.16s}
+.latest:hover{border-color:#c9d6e6;text-decoration:none;box-shadow:0 8px 24px rgba(18,24,31,.06)}
+.latest .kicker{font-size:12.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--brand);margin-bottom:8px}
+.latest h2{font-size:20px;line-height:1.3;letter-spacing:-.015em;margin:0}
+.latest p{color:var(--soft);font-size:15px;margin-top:8px}
+
+/* ---- polish pass ---- */
+html{scroll-padding-top:92px}
+body{overflow-x:hidden}
+section{scroll-margin-top:92px}
+a{overflow-wrap:anywhere}
+
+.hero{background:linear-gradient(180deg,#f2f7ff 0%,#fbfdff 100%);
+  border:1px solid var(--line);border-radius:20px;padding:30px 24px 32px;margin-top:26px}
+.hero h1{font-size:30px;max-width:24ch}
+.hero p{margin-top:12px}
+@media(min-width:820px){.hero{padding:52px 44px 56px}.hero h1{font-size:44px}}
+
+.section-sep{padding:52px 0}
+.section-sep + .section-sep{padding-top:44px}
+.eyebrow{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.09em;
+  text-transform:uppercase;color:var(--brand);background:var(--brand-soft);
+  padding:6px 11px;border-radius:999px;margin-bottom:14px}
+.legal-page{padding:0 20px;max-width:760px}
+.legal-page h1{font-size:27px;margin-bottom:6px}
+.legal-page h2{font-size:18px;margin-top:26px}
+.legal-page p,.legal-page li{font-size:16.5px}
+.legal-page .updated{margin-bottom:22px;padding-bottom:16px;border-bottom:1px solid var(--line)}
+
+article h2{font-size:22px;margin-top:36px;padding-top:6px}
+article p{font-size:17px}
+.byline{border-bottom:1px solid var(--line)}
+
+/* mobile quick nav */
+.quicknav{display:flex;gap:8px;overflow-x:auto;padding:10px 20px;background:#fff;
+  border-top:1px solid var(--line);-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.quicknav::-webkit-scrollbar{display:none}
+.quicknav a{flex:none;font-size:13.5px;font-weight:700;color:var(--soft);background:#f4f7fb;
+  padding:7px 13px;border-radius:999px;white-space:nowrap}
+.quicknav a:hover{color:var(--brand);text-decoration:none;background:var(--brand-soft)}
+@media(min-width:820px){.quicknav{display:none}}
+
+.totop{display:inline-block;margin-top:22px;font-size:14px;font-weight:700;color:var(--brand)}
+footer.site{border-top:1px solid var(--line)}
+</style>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231552d6'/%3E%3Ctext x='16' y='23' font-family='system-ui,sans-serif' font-size='19' font-weight='700' fill='white' text-anchor='middle'%3EG%3C/text%3E%3C/svg%3E">
+<link rel="canonical" href="https://manojkumarmansingh.github.io/">
+<meta name="theme-color" content="#1552d6">
+<meta name="robots" content="index, follow">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"GadgetSense","url":"https://manojkumarmansingh.github.io/","description":"Honest, practical guides about Android phones, apps and everyday gadgets for India."}
+</script>
+</head>
+<body id="top">
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="#top"><span class="brand-mark">G</span> GadgetSense</a>
+    <nav class="nav-links">
+        <a href="#top">Home</a>
+        <a href="#article">Phone fixes</a>
+        <a href="#upi">UPI safety</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="#privacy">Privacy</a>
+        <a href="#disclaimer">Disclaimer</a>
+        <a href="#terms">Terms</a>
+    </nav>
+  </div>
+  <div class="quicknav">
+    <a href="#article">Phone fixes</a>
+    <a href="#upi">UPI safety</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+    <a href="#privacy">Privacy</a>
+    <a href="#disclaimer">Disclaimer</a>
+    <a href="#terms">Terms</a>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <section class="hero">
+      <h1>Your phone isn't slow. Your settings are.</h1>
+      <p>I write about Android phones, apps and everyday gadgets the way I'd explain it to a friend over chai: the actual answer, in one page, no 20-minute video and nothing sponsored.</p>
+      <a class="latest" href="#upi">
+        <div class="kicker">New this week</div>
+        <h2>The Android permission that lets a scam app watch your UPI PIN</h2>
+        <p>NPCI is talking to Google about this kind of fraud. Check the one setting on your phone today. Read it &rarr;</p>
+      </a>
+      <a class="latest" href="#article">
+        <div class="kicker">Also worth reading</div>
+        <h2>Why your Android phone slows down after a year, and the 6 fixes that work</h2>
+        <p>Storage pressure, background apps and battery ageing explain almost all slowdowns. Read the fixes &rarr;</p>
+      </a>
+    </section>
+    <!-- AdSense slot: leaderboard ad unit goes here after approval -->
+  </div>
+</main>
+
+<section id="article" class="section-sep">
+  <div class="narrow">
+    <article>
+      <h1>Why your Android phone slows down after a year, and the 6 fixes that actually work</h1>
+      <p class="byline">By Manoj Kumar Mansingh · Updated 20 November 2026 · 8 min read</p>
+
+      <p>Almost every Android phone feels fast in its first month and tired by its twelfth. It is rarely because the phone has "worn out" in some vague sense. In most cases the cause is one of four things: storage nearly full, too many apps waking up in the background, an ageing battery that cannot deliver peak power, or a cache and app set that has grown unchecked.</p>
+
+      <p>The fixes below are ordered by how much difference they make per minute of effort. Do them in order and stop when the phone feels acceptable. There is no need to do all six.</p>
+
+      <div class="toc">
+        <p>In this guide</p>
+        <ol>
+          <li>Get storage below 80% full</li>
+          <li>Cut background app activity</li>
+          <li>Clear the cache properly</li>
+          <li>Turn off animations</li>
+          <li>Check battery health</li>
+          <li>Know when to stop fixing</li>
+        </ol>
+      </div>
+
+      <h2>1. Get storage below 80% full</h2>
+      <p>This is the single biggest cause and the easiest to check. Flash storage needs free space to write and shuffle data. When a phone is above roughly 85–90% full, the system starts spending time finding room instead of doing work, and the whole interface feels sticky.</p>
+      <p>Open <strong>Settings → Storage</strong> and look at the number, not the coloured bar. If you are above 80%, the fastest wins are usually:</p>
+      <ul>
+        <li><strong>Photos and videos</strong>: back them up, then delete the local copies.</li>
+        <li><strong>WhatsApp media</strong>: the single largest hidden consumer on most Indian phones. Clear the forwarded videos and images you will never open again.</li>
+        <li><strong>Downloads folder</strong>: old PDFs, APK files and screenshots.</li>
+        <li><strong>Apps you have not opened in three months</strong>: uninstall, not just disable.</li>
+      </ul>
+      <p>Getting from 92% to 70% full often does more for perceived speed than any "booster" app ever will.</p>
+
+      <h2>2. Cut background app activity</h2>
+      <p>Every app you install can ask to run in the background. Twenty apps doing that quietly will keep the processor busy and the memory full, which is why the phone hesitates when you switch apps.</p>
+      <p>Go to <strong>Settings → Apps → [app] → Battery → Restricted</strong> for anything you do not need notifications from in real time: shopping apps, games, news apps, most utilities. Keep messaging, banking and anything with OTP or delivery alerts unrestricted.</p>
+      <div class="callout">
+        <p><strong>Do not use "RAM booster" or "cleaner" apps.</strong> Android manages memory itself. These apps kill processes that the system then has to restart, which costs more battery and makes the phone slower, not faster.</p>
+      </div>
+
+      <h2>3. Clear the cache properly</h2>
+      <p>Clearing cache is safe; clearing "data" is not, because that wipes your logins and settings. For a stubborn app, use <strong>Settings → Apps → [app] → Storage → Clear cache</strong>. For the whole system, a reboot once a week does most of the same work.</p>
+      <p>If your phone has been updated across several major Android versions, a factory reset, after a full backup, is the honest fix. It is a two-hour job and it genuinely restores most of the original speed, because it removes years of accumulated app cruft.</p>
+
+      <h2>4. Turn off animations</h2>
+      <p>This does not make the phone faster, but it makes it <em>feel</em> faster, which is what most people are actually complaining about. Enable Developer options (tap <strong>Build number</strong> seven times in <strong>About phone</strong>), then set <strong>Window animation scale</strong>, <strong>Transition animation scale</strong> and <strong>Animator duration scale</strong> to 0.5x. Many people prefer 0.5x over off, since it keeps the interface from feeling abrupt.</p>
+
+      <h2>5. Check the battery</h2>
+      <p>A battery that has lost a lot of capacity cannot always supply peak current, so the phone limits processor speed to avoid shutting down. That shows up as lag when the battery is below 20% or in the heat.</p>
+      <p>Most Android phones show battery status under <strong>Settings → Battery → Battery health</strong> or in the manufacturer's own service app; if yours does not, a service centre can read it in a minute. Below about 80% of original capacity on a phone that is two years old, a battery replacement is usually cheaper and more effective than a new phone.</p>
+
+      <h2>6. Know when to stop fixing</h2>
+      <p>If you have done the first three steps and the phone is still slow, the limiting factor is usually the hardware itself: 3–4 GB of RAM with a modern app set, or a processor from several generations ago. No setting fixes that. At that point the sensible options are a battery replacement if the phone is otherwise fine, or a new phone. The honest test is whether the lag happens in the first five minutes after a reboot. If it does, it is the hardware.</p>
+
+      <div class="callout">
+        <p><strong>The short version:</strong> get storage under 80%, restrict background battery use for shopping and game apps, reboot weekly, and replace the battery at the two-year mark. That covers most cases.</p>
+      </div>
+
+      <p style="color:#5b6b7a;font-size:14.5px;margin-top:34px;padding-top:18px;border-top:1px solid #e4e9ee">
+        Menu names vary slightly between Samsung, Xiaomi, Realme, Vivo and stock Android. If a path does not match your phone, search the setting name in your phone's own Settings search box. Every modern Android build has one.
+      </p>
+    </article>
+  </div>
+</section>
+
+<section id="upi" class="section-sep">
+  <div class="narrow">
+    <article>
+      <h1>The Android permission that lets a scam app watch your UPI PIN</h1>
+      <p class="byline">By Manoj Kumar Mansingh &middot; Updated 20 November 2026 &middot; 6 min read</p>
+
+      <p>UPI fraud used to mean a phone call from someone pretending to be from your bank, talking you into reading out an OTP. That still happens. But a newer kind of fraud does not need you to trust anyone on the phone, and it does not need your PIN either. It needs one permission on your phone that most people grant without reading it.</p>
+
+      <p>On 17 November 2026, Livemint reported that NPCI, the body that runs UPI, has started talking to Google about exactly this problem. The fraudsters are not tricking users into sharing details. They are installing apps that misuse Android permissions to interfere with other apps on the phone, including the payment app you are about to type your PIN into.</p>
+
+      <h2>The permission in question</h2>
+      <p>It is called <strong>Display over other apps</strong>. On some phones it appears as <strong>Appear on top</strong> or <strong>Draw over other apps</strong>. In plain language, it lets one app put its own window on top of whatever you are looking at.</p>
+      <p>That is useful for a genuine app. A call bubble, a screen recorder, a floating timer all need it. The problem is what it allows when the app is not genuine. A malicious app can draw a convincing copy of a payment screen over the real one. You type your UPI PIN into what looks like your payment app, and the layer on top is the thing receiving it.</p>
+
+      <div class="callout">
+        <p><strong>The uncomfortable part:</strong> nothing looks wrong while it happens. The screen looks normal, the app looks normal, and the payment may even go through. The theft is the copy of your PIN, used later.</p>
+      </div>
+
+      <h2>Check this setting today, it takes two minutes</h2>
+      <p>The menu name varies by brand, but it is in the same place on almost every Android phone:</p>
+      <ul>
+        <li><strong>Stock Android and Pixel:</strong> Settings &rarr; Apps &rarr; Special app access &rarr; Display over other apps</li>
+        <li><strong>Samsung:</strong> Settings &rarr; Apps &rarr; the three dot menu &rarr; Special access &rarr; Appear on top</li>
+        <li><strong>Xiaomi, Redmi, Poco:</strong> Settings &rarr; Apps &rarr; Manage apps &rarr; Special permissions &rarr; Display pop-up windows while running in the background</li>
+        <li><strong>Vivo, Oppo, Realme:</strong> Settings &rarr; Apps &rarr; Special app access, or search "appear on top" in the Settings search box</li>
+      </ul>
+      <p>You will get a list of every app that is allowed to draw on top of others. Read it slowly. Turn off anything you do not recognise, and turn off anything that has no honest reason to be there. A shopping app, a photo editor or a game does not need to draw over your banking app. A screen recorder might. Be strict.</p>
+
+      <h2>The second permission to look at: Accessibility</h2>
+      <p>While you are in there, check <strong>Settings &rarr; Accessibility &rarr; Downloaded apps</strong>. Accessibility access was built for screen readers and switch devices. It also lets an app read what is on your screen and tap things on your behalf, which is why banking trojans want it badly.</p>
+      <p>The rule is simple. If an app you installed in the last few months has accessibility access and you did not turn it on for a disability or a genuinely useful feature, turn it off now.</p>
+
+      <h2>Stop side-loaded apps at the door</h2>
+      <p>Almost every one of these cases starts with an app installed from outside the Play Store, usually an APK file sent over WhatsApp or offered on a website. Two settings make that much harder to do by accident:</p>
+      <ul>
+        <li>Go to <strong>Settings &rarr; Apps &rarr; Special app access &rarr; Install unknown apps</strong>. Turn it off for your browser and for messaging apps. Then a link cannot quietly install something.</li>
+        <li>Before installing anything from the Play Store, check the developer name, the number of downloads and the recent reviews. A banking or government app with 500 installs and five reviews is not the real app.</li>
+      </ul>
+
+      <h2>If money has already moved</h2>
+      <p>Call your bank's fraud line immediately and ask them to freeze the account and flag the transaction. Then report it at <strong>cybercrime.gov.in</strong> or on the national cybercrime helpline <strong>1930</strong>. Speed matters more than anything else here: the earlier a fraudulent transfer is reported, the better the chance the receiving account is still frozen with the money in it.</p>
+
+      <h2>The short version</h2>
+      <p>Open your phone's settings, find Display over other apps, and remove every app you cannot justify. Then look at Accessibility and Install unknown apps. Those three screens are where this kind of fraud lives, and clearing them out costs less time than a single failed transaction.</p>
+
+      <p style="color:#5b6b7a;font-size:14.5px;margin-top:34px;padding-top:18px;border-top:1px solid #e4e9ee">
+        Background: Livemint report of 17 November 2026 on NPCI's discussions with Google. Menu names differ between brands and software versions, so if a path does not match your phone, search the permission name in your phone's own Settings search box.
+      </p>
+    </article>
+  </div>
+</section>
+
+<section id="about" class="section-sep"><div class="legal-page"><span class="eyebrow">Who writes this</span><h1>About me</h1>
+    <p class="updated">Last updated: 20 November 2026</p>
+
+<p>I'm Manoj. I got tired of searching for a simple answer about my phone and landing on either a twenty-minute video or a page written mainly to sell me something, so I started writing the answers down here instead.</p>
+<h2>What I write</h2>
+<p>How things work, what is worth your money, what is marketing noise, and the fixes you can do yourself without a service centre. Each guide is short enough to finish in one sitting and specific enough to act on the same day.</p>
+<h2>What I won't do</h2>
+<p>I don't publish sponsored reviews dressed up as opinion. If a page ever carries a paid placement or an affiliate link, it will say so at the top of that page, in plain words. I'm not affiliated with any manufacturer, and no brand gets to read an article before it goes up.</p>
+<h2>When I get it wrong</h2>
+<p>I do, sometimes. Menu names differ between brands and software versions change. Email me and I'll correct the page and note the change rather than quietly editing it.</p>
+<h2>How this site pays for itself</h2>
+<p>With advertising. Ads are served by third-party networks, which may use cookies. The <a href="#privacy">privacy policy</a> explains exactly what that means.</p>
+<h2>Contact</h2>
+<p>Write to <a href="mailto:frontilabtechnologies@gmail.com">frontilabtechnologies@gmail.com</a> with corrections. If we got something wrong, we will fix it and say so on the page.</p></div></section>
+<section id="contact" class="section-sep"><div class="legal-page"><span class="eyebrow">Say hello</span><h1>Contact</h1>
+    <p class="updated">Last updated: 20 November 2026</p>
+
+<p>Email me directly: <a href="mailto:frontilabtechnologies@gmail.com" style="font-weight:700">frontilabtechnologies@gmail.com</a>. That inbox reaches me, not a support queue.</p>
+<h2>Corrections</h2>
+<p>If a price, a specification or an instruction on this site is wrong, tell me the page and what's incorrect. Corrections usually go up within a few days.</p>
+<h2>Advertising and business</h2>
+<p>For advertising enquiries, use the same address with "Advertising" in the subject line.</p>
+<h2>Response time</h2>
+<p>I read everything, though I can't always reply to every message. Usually within three working days.</p></div></section>
+<section id="privacy" class="section-sep"><div class="legal-page"><span class="eyebrow">Privacy</span><h1>Privacy policy</h1>
+    <p class="updated">Last updated: 20 November 2026</p>
+
+<p>This policy explains what data this website collects and how it is used.</p>
+<h2>Information you give us</h2>
+<p>If you email us, we receive your email address and whatever you write. We use it only to reply. We do not sell or share it.</p>
+<h2>Information collected automatically</h2>
+<p>Like most websites, our hosting provider records standard technical information such as the pages requested, the time of the request and an approximate location derived from the IP address. This is used to keep the site running and secure.</p>
+<h2>Cookies and advertising</h2>
+<p>This site is supported by advertising. Third-party vendors, including Google, may use cookies to serve ads based on your prior visits to this and other websites. Google's use of advertising cookies enables it and its partners to serve ads to you based on your visit to this site and other sites on the internet.</p>
+<ul>
+  <li>You may opt out of personalised advertising by visiting Google's <a href="https://www.google.com/settings/ads" rel="nofollow noopener" target="_blank">Ads Settings</a>.</li>
+  <li>You can opt out of third-party vendor cookies for personalised advertising at <a href="https://www.aboutads.info/choices/" rel="nofollow noopener" target="_blank">aboutads.info</a>.</li>
+  <li>More detail is available in <a href="https://policies.google.com/technologies/partner-sites" rel="nofollow noopener" target="_blank">How Google uses information from sites that use its services</a>.</li>
+</ul>
+<h2>Analytics</h2>
+<p>If analytics is enabled on this site, it is used only to understand which pages are useful. We do not attempt to identify individual readers.</p>
+<h2>Children</h2>
+<p>This site is not directed at children under 13 and we do not knowingly collect their data.</p>
+<h2>Your rights</h2>
+<p>You can ask us what personal data we hold about you, and ask us to delete it, by writing to <a href="mailto:frontilabtechnologies@gmail.com">frontilabtechnologies@gmail.com</a>.</p>
+<h2>Changes</h2>
+<p>If this policy changes, the date at the top of this page changes with it.</p></div></section>
+<section id="disclaimer" class="section-sep"><div class="legal-page"><span class="eyebrow">Disclaimer</span><h1>Disclaimer</h1>
+    <p class="updated">Last updated: 20 November 2026</p>
+
+<p>The content on this site is for general information only. It is written in good faith and checked before publishing, but technology changes quickly and menu names, prices and specifications differ between models, regions and software versions.</p>
+<h2>No professional advice</h2>
+<p>Nothing here is legal, financial or professional advice. For repairs under warranty, always use the manufacturer's authorised service centre.</p>
+<h2>Prices and availability</h2>
+<p>Any price mentioned is indicative and was correct at the time of writing. Prices in India change frequently, especially during sales.</p>
+<h2>Risk</h2>
+<p>If you follow a repair or troubleshooting step, you do so at your own risk. Back up your data before any step that touches storage, and stop if a device is under warranty.</p>
+<h2>External links</h2>
+<p>We link to other sites for reference. We are not responsible for their content.</p></div></section>
+<section id="terms" class="section-sep"><div class="legal-page"><span class="eyebrow">Terms</span><h1>Terms of use</h1>
+    <p class="updated">Last updated: 20 November 2026</p>
+
+<p>By using this website you agree to these terms.</p>
+<h2>Use of content</h2>
+<p>All articles on this site are original work and are protected by copyright. You may quote short extracts with a link back to the page. You may not republish full articles without written permission.</p>
+<h2>Acceptable use</h2>
+<p>Do not attempt to disrupt the site, scrape it at volume, or use it for anything unlawful.</p>
+<h2>Advertising</h2>
+<p>This site displays third-party advertising. We do not control which ads are shown, and the appearance of an ad is not an endorsement.</p>
+<h2>Limitation of liability</h2>
+<p>The site is provided "as is". To the extent permitted by law, we are not liable for any loss arising from use of the information published here.</p>
+<h2>Governing law</h2>
+<p>These terms are governed by the laws of India.</p>
+<h2>Contact</h2>
+<p>Questions about these terms: <a href="mailto:frontilabtechnologies@gmail.com">frontilabtechnologies@gmail.com</a></p></div></section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="#top" style="margin-bottom:10px"><span class="brand-mark">G</span> GadgetSense</a>
+        <p style="max-width:36ch">Phone fixes and honest tech answers, written by Manoj Kumar Mansingh.</p>
+      </div>
+      <div>
+        <h3>Site</h3>
+        <ul>
+          <li><a href="#article">Article</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="mailto:frontilabtechnologies@gmail.com">frontilabtechnologies@gmail.com</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Legal</h3>
+        <ul>
+          <li><a href="#privacy">Privacy policy</a></li>
+          <li><a href="#disclaimer">Disclaimer</a></li>
+          <li><a href="#terms">Terms of use</a></li>
+        </ul>
+      </div>
+    </div>
+    <a class="totop" href="#top">&uarr; Back to top</a>
+    <p class="legal">&copy; 2026 GadgetSense. All rights reserved. This site is independent and is not affiliated with any phone, gadget or app manufacturer mentioned in its articles.</p>
+  </div>
+</footer>
+
+</body>
+</html>
