@@ -140,6 +140,10 @@ article p{font-size:17px}
 .quicknav a:hover{color:var(--brand);text-decoration:none;background:var(--brand-soft)}
 @media(min-width:820px){.quicknav{display:none}}
 
+.ad-slot{display:none;max-width:760px;margin:32px auto;padding:0 20px;text-align:center}
+.ad-slot.on{display:block}
+.ad-label{font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:#9aa8b5;
+  margin-bottom:6px;font-weight:700}
 .totop{display:inline-block;margin-top:22px;font-size:14px;font-weight:700;color:var(--brand)}
 footer.site{border-top:1px solid var(--line)}
 </style>
@@ -150,8 +154,26 @@ footer.site{border-top:1px solid var(--line)}
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebSite","name":"GadgetSense","url":"https://manojkumarmansingh.github.io/","description":"Honest, practical guides about Android phones, apps and everyday gadgets for India."}
 </script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5901079235698442" crossorigin="anonymous"></script>
 </head>
 <body id="top">
+
+<script>
+/* ============================================================
+   ADSENSE CONFIG
+   Leave these blank until Google approves your site.
+   After approval, paste your publisher ID into client,
+   and each ad unit ID into slots. Nothing loads while blank.
+   ============================================================ */
+window.ADSENSE = {
+  client: "ca-pub-5901079235698442",
+  slots: {
+    top: "",           // e.g. "1234567890"
+    mid: "",
+    bottom: ""
+  }
+};
+</script>
 
 <header class="site">
   <div class="wrap nav">
@@ -160,6 +182,7 @@ footer.site{border-top:1px solid var(--line)}
         <a href="#top">Home</a>
         <a href="#article">Phone fixes</a>
         <a href="#upi">UPI safety</a>
+        <a href="#security">Security patch</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
         <a href="#privacy">Privacy</a>
@@ -170,6 +193,7 @@ footer.site{border-top:1px solid var(--line)}
   <div class="quicknav">
     <a href="#article">Phone fixes</a>
     <a href="#upi">UPI safety</a>
+    <a href="#security">Security patch</a>
     <a href="#about">About</a>
     <a href="#contact">Contact</a>
     <a href="#privacy">Privacy</a>
@@ -183,18 +207,25 @@ footer.site{border-top:1px solid var(--line)}
     <section class="hero">
       <h1>Your phone isn't slow. Your settings are.</h1>
       <p>I write about Android phones, apps and everyday gadgets the way I'd explain it to a friend over chai: the actual answer, in one page, no 20-minute video and nothing sponsored.</p>
-      <a class="latest" href="#upi">
+      <a class="latest" href="#security">
         <div class="kicker">New this week</div>
+        <h2>Your Android version does not keep you safe. This number does.</h2>
+        <p>CERT-In issued a high severity alert in November. Here is the ten second check on your own phone. Read it &rarr;</p>
+      </a>
+      <a class="latest" href="#upi">
+        <div class="kicker">Also worth reading</div>
         <h2>The Android permission that lets a scam app watch your UPI PIN</h2>
         <p>NPCI is talking to Google about this kind of fraud. Check the one setting on your phone today. Read it &rarr;</p>
       </a>
       <a class="latest" href="#article">
-        <div class="kicker">Also worth reading</div>
+        <div class="kicker">Start here</div>
         <h2>Why your Android phone slows down after a year, and the 6 fixes that work</h2>
         <p>Storage pressure, background apps and battery ageing explain almost all slowdowns. Read the fixes &rarr;</p>
       </a>
     </section>
-    <!-- AdSense slot: leaderboard ad unit goes here after approval -->
+    <div class="ad-slot" data-ad="top">
+      <div class="ad-label">Advertisement</div>
+    </div>
   </div>
 </main>
 
@@ -263,6 +294,10 @@ footer.site{border-top:1px solid var(--line)}
   </div>
 </section>
 
+<div class="ad-slot" data-ad="mid">
+  <div class="ad-label">Advertisement</div>
+</div>
+
 <section id="upi" class="section-sep">
   <div class="narrow">
     <article>
@@ -310,6 +345,48 @@ footer.site{border-top:1px solid var(--line)}
 
       <p style="color:#5b6b7a;font-size:14.5px;margin-top:34px;padding-top:18px;border-top:1px solid #e4e9ee">
         Background: Livemint report of 17 November 2026 on NPCI's discussions with Google. Menu names differ between brands and software versions, so if a path does not match your phone, search the permission name in your phone's own Settings search box.
+      </p>
+    </article>
+  </div>
+</section>
+
+<section id="security" class="section-sep">
+  <div class="narrow">
+    <article>
+      <h1>Your Android version does not keep you safe. This number does.</h1>
+      <p class="byline">By Manoj Kumar Mansingh &middot; Updated 20 November 2026 &middot; 5 min read</p>
+
+      <p>On 4 November 2026, India's computer emergency response team, CERT-In, issued a high severity advisory about security holes inside Android itself. It covers phones running Android 14, 15, 16, 16 QPR2 and Android 17, which is most of the Android phones in the country.</p>
+
+      <p>The uncomfortable detail is in the wording. Some of these flaws sit in the Framework and System components, and CERT-In warned that an attacker could use them to run malicious code remotely, in some cases without you tapping a bad link or installing a fake app. That is a different class of risk from the scam messages most of us have learned to spot.</p>
+
+      <h2>What actually matters: the patch level</h2>
+      <p>Here is the part almost nobody checks. Google fixes these flaws in its monthly security bulletin, and the fix reaches your phone as a small update. Your phone records exactly which fix it has, and you can read it in ten seconds.</p>
+      <p>Open <strong>Settings</strong>, then <strong>About phone</strong>, then <strong>Android version</strong>. You are looking for a line that says <strong>Android security update</strong> or <strong>Security patch level</strong>. For this advisory, the safe values are <strong>1 November 2026</strong> or <strong>5 November 2026</strong>, or anything later.</p>
+      <p>If that date is months old, your phone is missing fixes for problems that are already public. That is the real measure of whether you are protected, and it is why a phone on the newest Android version with a stale patch can be less safe than an older phone that updates regularly.</p>
+
+      <div class="callout">
+        <p><strong>Quick test:</strong> if the security patch date is older than about two months, update the phone today. Anything before September 2026 for this advisory is worth fixing immediately.</p>
+      </div>
+
+      <h2>How to update, and what to do when it says "up to date"</h2>
+      <ul>
+        <li>Go to <strong>Settings</strong> and search for <strong>System update</strong> or <strong>Software update</strong>, then tap <strong>Check for update</strong>.</li>
+        <li>Updates roll out in batches by region and model, so "no update available" often just means your batch has not arrived. Check again in a few days.</li>
+        <li>If it has been weeks, clear the cache of <strong>Google Play services</strong> in Settings, Apps, and try again. That clears the update check on many phones.</li>
+        <li>For phones that no longer receive updates at all, the honest answer is that the manufacturer has ended support. Check the brand's support page for your model. If it stopped years ago, no setting will protect you, and that is a reason to consider replacing the phone rather than installing another cleaner app.</li>
+      </ul>
+
+      <h2>Three habits that matter more than the version number</h2>
+      <p><strong>Update the moment it is offered.</strong> The gap between a fix being published and phones installing it is exactly the window attackers work in, because the details become public when Google publishes the bulletin.</p>
+      <p><strong>Keep Play Protect on.</strong> It is in the Play Store under your profile, then Play Protect. It scans installed apps and warns about known harmful ones. Turning it off to install something is almost always a bad trade.</p>
+      <p><strong>Treat "no update for my model" as information, not a failure.</strong> Budget phones often get two years of security updates and then stop. If yours has stopped, keep it off banking apps and use it for what it still does well.</p>
+
+      <h2>The short version</h2>
+      <p>Open Settings, find your security patch level, and check the date. If it is November 2026 or later, you have the fixes from this advisory and you can stop reading. If it is older, update today, and if your phone no longer receives updates at all, know that no app from the Play Store will fix that.</p>
+
+      <p style="color:#5b6b7a;font-size:14.5px;margin-top:34px;padding-top:18px;border-top:1px solid #e4e9ee">
+        Background: CERT-In vulnerability note CIVN-2026-0536, published 4 November 2026, and Google's Android Security Bulletin for November 2026. Menu names differ between brands, so search the setting name in your phone's own Settings search box if a path does not match.
       </p>
     </article>
   </div>
@@ -391,6 +468,10 @@ footer.site{border-top:1px solid var(--line)}
 <h2>Contact</h2>
 <p>Questions about these terms: <a href="mailto:frontilabtechnologies@gmail.com">frontilabtechnologies@gmail.com</a></p></div></section>
 
+<div class="ad-slot" data-ad="bottom">
+  <div class="ad-label">Advertisement</div>
+</div>
+
 <footer class="site">
   <div class="wrap">
     <div class="foot-grid">
@@ -421,5 +502,35 @@ footer.site{border-top:1px solid var(--line)}
   </div>
 </footer>
 
+<script>
+(function(){
+  var cfg = window.ADSENSE || {};
+  var client = (cfg.client || "").trim();
+  if (client.indexOf("ca-pub-") !== 0) return;   /* not approved yet, do nothing */
+
+  if (!document.querySelector('script[src*="adsbygoogle.js"]')) {
+    var tag = document.createElement("script");
+    tag.async = true;
+    tag.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=" + client;
+    tag.crossOrigin = "anonymous";
+    document.head.appendChild(tag);
+  }
+
+  document.querySelectorAll(".ad-slot").forEach(function(slot){
+    var id = (cfg.slots || {})[slot.getAttribute("data-ad")];
+    if (!id) return;
+    var ins = document.createElement("ins");
+    ins.className = "adsbygoogle";
+    ins.style.display = "block";
+    ins.setAttribute("data-ad-client", client);
+    ins.setAttribute("data-ad-slot", id);
+    ins.setAttribute("data-ad-format", "auto");
+    ins.setAttribute("data-full-width-responsive", "true");
+    slot.appendChild(ins);
+    slot.classList.add("on");
+    (window.adsbygoogle = window.adsbygoogle || []).push({});
+  });
+})();
+</script>
 </body>
 </html>
