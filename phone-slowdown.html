@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Why your Android phone slows down after a year, and the 6 fixes that work</title>
+<meta name="description" content="Storage pressure, background apps and battery ageing explain almost all Android slowdowns. What to fix first, in order.">
+<link rel="canonical" href="https://manojkumarmansingh.github.io/phone-slowdown.html">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#1552d6">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231552d6'/%3E%3Ctext x='16' y='23' font-family='system-ui,sans-serif' font-size='19' font-weight='700' fill='white' text-anchor='middle'%3EG%3C/text%3E%3C/svg%3E">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5901079235698442" crossorigin="anonymous"></script>
+<style>
+:root{
+  --ink:#12181f; --soft:#5b6b7a; --line:#e4e9ee; --bg:#fff;
+  --brand:#1552d6; --brand-soft:#eef3ff; --max:740px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  color:var(--ink);background:var(--bg);line-height:1.68;font-size:17px;
+}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--brand);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+.narrow{max-width:var(--max);margin:0 auto;padding:0 20px}
+
+header.site{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.94);
+  backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:14px 0}
+.brand{display:flex;align-items:center;gap:9px;font-weight:800;font-size:18px;letter-spacing:-.02em;color:var(--ink)}
+.brand:hover{text-decoration:none}
+.brand-mark{width:30px;height:30px;border-radius:8px;background:var(--brand);color:#fff;
+  display:grid;place-items:center;font-size:15px;font-weight:800;flex:none}
+.nav-links{display:flex;gap:22px;font-size:15px;font-weight:600;color:var(--soft)}
+.nav-links a{color:var(--soft)}
+.nav-links a:hover{color:var(--brand);text-decoration:none}
+.nav-links{display:none}
+@media(min-width:820px){.nav-links{display:flex}}
+
+/* hero */
+.hero{padding:44px 0 10px}
+.hero h1{font-size:32px;line-height:1.18;letter-spacing:-.025em;font-weight:800;max-width:20ch}
+.hero p{color:var(--soft);margin-top:14px;font-size:17.5px;max-width:56ch}
+@media(min-width:820px){.hero{padding:64px 0 14px}.hero h1{font-size:46px}}
+
+/* cards */
+.grid{display:grid;gap:16px;padding:32px 0 48px}
+@media(min-width:700px){.grid{grid-template-columns:repeat(2,1fr)}}
+.card{display:block;border:1px solid var(--line);border-radius:14px;padding:20px;
+  color:inherit;background:#fff;transition:.16s}
+.card:hover{border-color:#c9d6e6;text-decoration:none;transform:translateY(-1px);
+  box-shadow:0 8px 24px rgba(18,24,31,.06)}
+.card .kicker{font-size:12.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--brand);margin-bottom:8px}
+.card h2{font-size:19px;line-height:1.3;letter-spacing:-.015em;margin-bottom:8px}
+.card p{color:var(--soft);font-size:15px}
+.card .meta{margin-top:12px;font-size:13px;color:#8494a3}
+
+/* article */
+article{padding:36px 0 24px}
+article h1{font-size:31px;line-height:1.2;letter-spacing:-.025em;font-weight:800}
+@media(min-width:820px){article h1{font-size:40px}}
+.byline{color:var(--soft);font-size:14px;margin-top:14px;padding-bottom:20px;border-bottom:1px solid var(--line)}
+article h2{font-size:23px;margin:34px 0 12px;letter-spacing:-.015em}
+article h3{font-size:19px;margin:26px 0 8px}
+article p{margin:14px 0}
+article ul,article ol{margin:14px 0 14px 22px}
+article li{margin:8px 0}
+article strong{font-weight:700}
+.callout{background:var(--brand-soft);border-left:3px solid var(--brand);
+  padding:14px 18px;border-radius:0 10px 10px 0;margin:22px 0;font-size:16px}
+.callout p{margin:6px 0}
+table{width:100%;border-collapse:collapse;margin:20px 0;font-size:15px}
+th,td{text-align:left;padding:11px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-weight:700;background:#f7f9fc;font-size:13.5px;text-transform:uppercase;letter-spacing:.04em;color:var(--soft)}
+.toc{background:#f7f9fc;border:1px solid var(--line);border-radius:12px;padding:16px 20px;margin:26px 0}
+.toc p{font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:.05em;color:var(--soft);margin:0 0 8px}
+.toc ol{margin:0 0 0 18px;font-size:15.5px}
+.toc li{margin:5px 0}
+
+/* footer */
+footer.site{border-top:1px solid var(--line);padding:34px 0 44px;margin-top:20px;
+  color:var(--soft);font-size:14px;background:#fbfcfd}
+.foot-grid{display:grid;gap:22px}
+@media(min-width:700px){.foot-grid{grid-template-columns:1.4fr 1fr 1fr}}
+footer.site a{color:var(--soft)}
+footer.site a:hover{color:var(--brand)}
+footer.site h3{font-size:13px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink);margin-bottom:10px}
+footer.site ul{list-style:none;display:grid;gap:7px}
+.legal{margin-top:26px;padding-top:18px;border-top:1px solid var(--line);font-size:13px;color:#8494a3}
+
+/* utility */
+.legal-page{padding:36px 0 60px}
+.legal-page h1{font-size:29px;letter-spacing:-.02em;margin-bottom:8px}
+.legal-page .updated{color:var(--soft);font-size:14px;margin-bottom:26px}
+.legal-page h2{font-size:19px;margin:28px 0 10px}
+.legal-page p{margin:12px 0}
+.legal-page ul{margin:12px 0 12px 22px}
+.legal-page li{margin:6px 0}
+.back{display:inline-block;margin-bottom:18px;font-size:15px;font-weight:600}
+
+.section-sep{border-top:1px solid var(--line)}
+.latest{display:block;border:1px solid var(--line);border-radius:14px;padding:22px;margin-top:26px;max-width:520px;color:inherit;background:#fff;transition:.16s}
+.latest:hover{border-color:#c9d6e6;text-decoration:none;box-shadow:0 8px 24px rgba(18,24,31,.06)}
+.latest .kicker{font-size:12.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--brand);margin-bottom:8px}
+.latest h2{font-size:20px;line-height:1.3;letter-spacing:-.015em;margin:0}
+.latest p{color:var(--soft);font-size:15px;margin-top:8px}
+
+/* ---- polish pass ---- */
+html{scroll-padding-top:92px}
+body{overflow-x:hidden}
+section{scroll-margin-top:92px}
+a{overflow-wrap:anywhere}
+
+.hero{background:linear-gradient(180deg,#f2f7ff 0%,#fbfdff 100%);
+  border:1px solid var(--line);border-radius:20px;padding:30px 24px 32px;margin-top:26px}
+.hero h1{font-size:30px;max-width:24ch}
+.hero p{margin-top:12px}
+@media(min-width:820px){.hero{padding:52px 44px 56px}.hero h1{font-size:44px}}
+
+.section-sep{padding:52px 0}
+.section-sep + .section-sep{padding-top:44px}
+.eyebrow{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.09em;
+  text-transform:uppercase;color:var(--brand);background:var(--brand-soft);
+  padding:6px 11px;border-radius:999px;margin-bottom:14px}
+.legal-page{padding:0 20px;max-width:760px}
+.legal-page h1{font-size:27px;margin-bottom:6px}
+.legal-page h2{font-size:18px;margin-top:26px}
+.legal-page p,.legal-page li{font-size:16.5px}
+.legal-page .updated{margin-bottom:22px;padding-bottom:16px;border-bottom:1px solid var(--line)}
+
+article h2{font-size:22px;margin-top:36px;padding-top:6px}
+article p{font-size:17px}
+.byline{border-bottom:1px solid var(--line)}
+
+/* mobile quick nav */
+.quicknav{display:flex;gap:8px;overflow-x:auto;padding:10px 20px;background:#fff;
+  border-top:1px solid var(--line);-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.quicknav::-webkit-scrollbar{display:none}
+.quicknav a{flex:none;font-size:13.5px;font-weight:700;color:var(--soft);background:#f4f7fb;
+  padding:7px 13px;border-radius:999px;white-space:nowrap}
+.quicknav a:hover{color:var(--brand);text-decoration:none;background:var(--brand-soft)}
+@media(min-width:820px){.quicknav{display:none}}
+
+.ad-slot{display:none;max-width:760px;margin:32px auto;padding:0 20px;text-align:center}
+.ad-slot.on{display:block}
+.ad-label{font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:#9aa8b5;
+  margin-bottom:6px;font-weight:700}
+.totop{display:inline-block;margin-top:22px;font-size:14px;font-weight:700;color:var(--brand)}
+footer.site{border-top:1px solid var(--line)}
+
+.ad-slot{display:none;max-width:760px;margin:32px auto;padding:0 20px;text-align:center}
+.ad-slot.on{display:block}
+.ad-label{font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:#9aa8b5;margin-bottom:6px;font-weight:700}
+.article-head{padding:36px 0 0}
+.article-head h1{font-size:31px;line-height:1.2;letter-spacing:-.025em;font-weight:800}
+@media(min-width:820px){.article-head h1{font-size:40px}}
+.cards{display:grid;gap:16px;padding:8px 0 8px}
+@media(min-width:700px){.cards{grid-template-columns:1fr}}
+
+</style>
+</head>
+<body>
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="index.html"><span class="brand-mark">G</span> GadgetSense</a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="phone-slowdown.html">Phone fixes</a>
+      <a href="upi-pin-permission.html">UPI safety</a>
+      <a href="security-patch.html">Security patch</a>
+      <a href="ai-agent-tools.html">AI agents</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="narrow">
+    <div class="article-head"><h1>Why your Android phone slows down after a year, and the 6 fixes that actually work</h1></div>
+    <article>
+      
+      <p class="byline">By Manoj Kumar Mansingh · Updated 20 November 2026 · 8 min read</p>
+
+      <p>Almost every Android phone feels fast in its first month and tired by its twelfth. It is rarely because the phone has "worn out" in some vague sense. In most cases the cause is one of four things: storage nearly full, too many apps waking up in the background, an ageing battery that cannot deliver peak power, or a cache and app set that has grown unchecked.</p>
+
+      <p>The fixes below are ordered by how much difference they make per minute of effort. Do them in order and stop when the phone feels acceptable. There is no need to do all six.</p>
+
+      <div class="toc">
+        <p>In this guide</p>
+        <ol>
+          <li>Get storage below 80% full</li>
+          <li>Cut background app activity</li>
+          <li>Clear the cache properly</li>
+          <li>Turn off animations</li>
+          <li>Check battery health</li>
+          <li>Know when to stop fixing</li>
+        </ol>
+      </div>
+
+      <h2>1. Get storage below 80% full</h2>
+      <p>This is the single biggest cause and the easiest to check. Flash storage needs free space to write and shuffle data. When a phone is above roughly 85–90% full, the system starts spending time finding room instead of doing work, and the whole interface feels sticky.</p>
+      <p>Open <strong>Settings → Storage</strong> and look at the number, not the coloured bar. If you are above 80%, the fastest wins are usually:</p>
+      <ul>
+        <li><strong>Photos and videos</strong>: back them up, then delete the local copies.</li>
+        <li><strong>WhatsApp media</strong>: the single largest hidden consumer on most Indian phones. Clear the forwarded videos and images you will never open again.</li>
+        <li><strong>Downloads folder</strong>: old PDFs, APK files and screenshots.</li>
+        <li><strong>Apps you have not opened in three months</strong>: uninstall, not just disable.</li>
+      </ul>
+      <p>Getting from 92% to 70% full often does more for perceived speed than any "booster" app ever will.</p>
+
+      <h2>2. Cut background app activity</h2>
+      <p>Every app you install can ask to run in the background. Twenty apps doing that quietly will keep the processor busy and the memory full, which is why the phone hesitates when you switch apps.</p>
+      <p>Go to <strong>Settings → Apps → [app] → Battery → Restricted</strong> for anything you do not need notifications from in real time: shopping apps, games, news apps, most utilities. Keep messaging, banking and anything with OTP or delivery alerts unrestricted.</p>
+      <div class="callout">
+        <p><strong>Do not use "RAM booster" or "cleaner" apps.</strong> Android manages memory itself. These apps kill processes that the system then has to restart, which costs more battery and makes the phone slower, not faster.</p>
+      </div>
+
+      <h2>3. Clear the cache properly</h2>
+      <p>Clearing cache is safe; clearing "data" is not, because that wipes your logins and settings. For a stubborn app, use <strong>Settings → Apps → [app] → Storage → Clear cache</strong>. For the whole system, a reboot once a week does most of the same work.</p>
+      <p>If your phone has been updated across several major Android versions, a factory reset, after a full backup, is the honest fix. It is a two-hour job and it genuinely restores most of the original speed, because it removes years of accumulated app cruft.</p>
+
+      <h2>4. Turn off animations</h2>
+      <p>This does not make the phone faster, but it makes it <em>feel</em> faster, which is what most people are actually complaining about. Enable Developer options (tap <strong>Build number</strong> seven times in <strong>About phone</strong>), then set <strong>Window animation scale</strong>, <strong>Transition animation scale</strong> and <strong>Animator duration scale</strong> to 0.5x. Many people prefer 0.5x over off, since it keeps the interface from feeling abrupt.</p>
+
+      <h2>5. Check the battery</h2>
+      <p>A battery that has lost a lot of capacity cannot always supply peak current, so the phone limits processor speed to avoid shutting down. That shows up as lag when the battery is below 20% or in the heat.</p>
+      <p>Most Android phones show battery status under <strong>Settings → Battery → Battery health</strong> or in the manufacturer's own service app; if yours does not, a service centre can read it in a minute. Below about 80% of original capacity on a phone that is two years old, a battery replacement is usually cheaper and more effective than a new phone.</p>
+
+      <h2>6. Know when to stop fixing</h2>
+      <p>If you have done the first three steps and the phone is still slow, the limiting factor is usually the hardware itself: 3–4 GB of RAM with a modern app set, or a processor from several generations ago. No setting fixes that. At that point the sensible options are a battery replacement if the phone is otherwise fine, or a new phone. The honest test is whether the lag happens in the first five minutes after a reboot. If it does, it is the hardware.</p>
+
+      <div class="callout">
+        <p><strong>The short version:</strong> get storage under 80%, restrict background battery use for shopping and game apps, reboot weekly, and replace the battery at the two-year mark. That covers most cases.</p>
+      </div>
+
+      <p style="color:#5b6b7a;font-size:14.5px;margin-top:34px;padding-top:18px;border-top:1px solid #e4e9ee">
+        Menu names vary slightly between Samsung, Xiaomi, Realme, Vivo and stock Android. If a path does not match your phone, search the setting name in your phone's own Settings search box. Every modern Android build has one.
+      </p>
+    </article>
+  </div>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="index.html" style="margin-bottom:10px"><span class="brand-mark">G</span> GadgetSense</a>
+        <p style="max-width:36ch">Phone fixes and honest tech answers, written by Manoj Kumar Mansingh.</p>
+      </div>
+      <div>
+        <h3>Site</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Legal</h3>
+        <ul>
+          <li><a href="privacy.html">Privacy policy</a></li>
+          <li><a href="terms.html">Disclaimer and terms</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="legal">&copy; 2026 GadgetSense. All rights reserved. This site is independent and is not affiliated with any phone, gadget or app manufacturer mentioned in its articles.</p>
+  </div>
+</footer>
+</body>
+</html>
